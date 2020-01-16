@@ -14,7 +14,7 @@ import androidx.room.PrimaryKey
                         onDelete = CASCADE)
         ])
 data class Book(
-    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    @PrimaryKey(autoGenerate = true) val id: Int,
     val title: String,
     @ColumnInfo(name = "release_date") val releaseDate: String,
     @ColumnInfo(name = "author_id") val authorId: Int,

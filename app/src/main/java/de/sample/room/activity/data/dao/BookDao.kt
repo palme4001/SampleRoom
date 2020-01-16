@@ -8,6 +8,9 @@ import de.sample.room.activity.data.entity.Book
 @Dao
 interface BookDao {
 
+    @Query("SELECT * FROM books")
+    suspend fun getAllBooks(): List<Book>
+
     @Insert
     suspend fun addBook(book: Book)
 
